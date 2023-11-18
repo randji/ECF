@@ -1,0 +1,34 @@
+::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.menuBurger{
+    width: 5px;
+}
+
+header{
+    width: 100%;
+}
+
+body{
+    width: 100%;
+}
+.background{
+    background-color: black;
+    width: 100%;
+    color: white;
+}
+.voitureFond{
+    width: 500px;
+    opacity: 50%;
+    position: absolute;
+}
+.logo{
+    width: 300px;
+}
+.main{
+    width: 100%;
+}
