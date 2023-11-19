@@ -1,30 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_index.css">
     <title>Garage V.Parrot</title>
 </head>
-<body>
-    <header>
-        <div class="background">
-            <p>V. Parrot</p>
-            <img class="menuBurger" src="img/menuBurger.png" alt="menu burger">
+<body class="grid-container">
+    <header class="background">
+       
+        <p class="titre">V. Parrot</p>
+        <img class="menuBurger" src="img/menuBurger.png" alt="menu burger">
+            </div>
         </div>
     </header>
+
     <main>
+
         <img class="logo" src="img/LOGO_Vparrot.png" alt="logo">
-        <img class="voitureFond" src="img/daa9c2eb-79ca-4207-b92a-0d7c47e6a1fb.webp" alt="voiture">
+        <img class="fond" src="img/voitureFond.png" alt="voiture">
+        <p class="slogan">“Laissez votre voiture <br> 
+        entre de bonnes mains”</p>
     </main>
-    <footer>
-        <div class="background">
-            <p>tel: 01 12 25 45 74</p>
-            <p>horaire</p>
-            <p>lundi au samedi : 9h-18h</p>
-            <p>dimanche : Fermé</p>
-            <form action="">Formulaire de contact</form>
-        </div>
+
+    <footer class="background">
+    
+            <p class="tel">tel: 01 12 25 45 74</p>
+            <div class="horaire">
+                <p style="font-size: 15px;"><u>HORAIRE</u></p>
+                <p>lundi au samedi : 9h-18h <br>dimanche : Fermé</p>
+            </div>
+            <form class="formulaire" action="">Formulaire de contact</form>
+        
     </footer>
 </body>
 </html>
