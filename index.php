@@ -13,7 +13,7 @@
     
     <header class="background">
        
-        <p class="titre">V. PARROT djfkqddjfiq</p>
+        <p class="titre">V. PARROT</p>
          
     </header>
 
@@ -29,15 +29,30 @@
             <div class="entretien">Entretien régulier</div>
             <div class="vente">Vente de véhicules d'occasion</div>
         </div>
-       
+       <div class="temoignage">
+        <p class="intitule">TEMOIGNAGE</p>
+        <div class="client">
+            <p class="nom"> Serge</p>
+            <p class="commentaire">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis assumenda nulla voluptate cumque quamt.</p>
+        </div>
+        <div class="client">
+            <p class="nom"> Claire</p>
+            <p class="commentaire">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis assumenda nulla voluptate cumque quamt</p>
+        </div>
+        <div class="client">
+            <p class="nom"> Robert</p>
+            <p class="commentaire">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis assumenda nulla voluptate cumque quamt</p>
+        </div>
+        
+       </div>
     </main>
 
     <footer class="background">
     
             <p class="tel">tel: 01 12 25 45 74</p>
             <div class="horaire">
-                <p style="font-size: 15px; font-family: 'Mukta Vaani', sans-serif; color: #eba83a;"><u>HORAIRE</u></p>
-                <p style="font-family: 'Mukta Vaani', sans-serif;">lundi au samedi : 9h-18h <br>dimanche : Fermé</p>
+                <p style="font-size: 15px; font-family: 'Mukta Vaani', sans-serif; color: #eba83a;margin:0"><u>HORAIRE</u></p>
+                <p style="font-family: 'Mukta Vaani', sans-serif; margin:0">lundi au samedi : 9h-18h <br>dimanche : Fermé</p>
             </div>
             <form class="formulaire" action="" >Formulaire de contact</form>
         

@@ -21,8 +21,6 @@
     display: flex;
     align-items: center;
     justify-items: center;
-    
-    
 }
 
 header{
@@ -74,6 +72,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    
 }
 .reparation, .mecanique, .entretien, .vente{
     padding: 5px;
@@ -95,10 +94,36 @@ footer{
     align-items: center;
     justify-items: center;
 }
+
+.temoignage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   
+}
+.intitule{
+    font-family: 'Mukta Vaani', sans-serif;
+    font-size: 30px;
+}
+.client{
+    margin: 20px;
+    font-family: 'Amiko', sans-serif;
+    color: white;
+    background-color: black; 
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    border: 2px solid;
+    border-radius: 10px;
+}
+.nom{
+    color: #eba83a;
+}
 .horaire{
     grid-area: footer;
     text-align: center;
-    margin: 10px 20px 10px 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.commentaire{
+    padding: 10px;
 }
 .tel{
     font-family: 'Mukta Vaani', sans-serif;
