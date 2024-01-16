@@ -15,7 +15,7 @@
 }
 
 .titre{
-    color: #eba83a;
+    color: white;
     font-family: 'Ramaraja', serif;
     font-size: 40px;
     display: flex;
@@ -35,7 +35,7 @@ body{
 }
 .background{
     display: flex;
-    background-color: black;
+    background-color: #151515;
     color: white;
     justify-content: center;
 }
@@ -77,6 +77,7 @@ main{
     
 }
 .reparation, .mecanique, .entretien, .vente{
+    background-color: #f1f1f1;
     padding: 5px;
     margin: 8px;
     border: 2px solid;
@@ -86,11 +87,12 @@ main{
     transition: all 0.2s;
 }
 .reparation:hover, .mecanique:hover, .entretien:hover, .vente:hover{
-    background-color: #eba83a;
+    background-color: rgba(235, 168, 58, 0.87);
 }
 footer{
     grid-area: footer;
     font-size: 10px;
+    margin-top: 5px;
     align-items: center;
     justify-items: center;
     
@@ -105,9 +107,11 @@ footer{
 .intitule{
     font-family: 'Ramaraja', serif;
     font-size: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .client{
-    margin: 20px;
+    margin: 5px 20px 15px 25px;
     font-family: 'mogra', sans-serif;
     color: white;
     background-color: black; 
@@ -116,7 +120,7 @@ footer{
     border-radius: 10px;
 }
 .nom{
-    color: #eba83a;
+    color: #f1b660;
     font-size: 20px;
     margin-left: 10px;
 }
@@ -133,7 +137,7 @@ footer{
     padding-bottom: 10px;
     font-size: 15px; 
     font-family: 'mogra', sans-serif; 
-    color: #eba83a;
+    color: white;
     margin:0
 }
 .planningH{
