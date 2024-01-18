@@ -18,23 +18,12 @@ try {
         $monUser = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if (password_verify($passwordForm, $monUser['password'])){
-            echo "<!DOCTYPE html>";
-            echo "<html>";
-            echo "<head>";
-            echo "<title>Inscription Réussie</title>";
-            echo "<style>";
-            echo "  .message-success {";
-            echo "    color: green;";
-            echo "    font-size: 24px;";
-            echo "    text-align: center;";
-            echo "    margin-top: 50px;";
-            echo "  }";
-            echo "</style>";
-            echo "</head>";
-            echo "<body>";
-            echo "<div class='message-success'>Connexion réussie ! Bienvenue " . htmlspecialchars($monUser['name']) . " " . htmlspecialchars($monUser['firstname']) . "</div>";
-            echo "</body>";
-            echo "</html>";
+            if ($monUser['role'] == 'admin') {
+                header("location: dashboardAdmin.php");
+            }
+            else{
+                header("location: dashboardEmploye.php");
+            }
         }
     }
         else{
