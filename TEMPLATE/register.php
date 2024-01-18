@@ -6,20 +6,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Mogra&family=Ramaraja&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="registerStyle.css">
+    <link rel="stylesheet" href="../CSS/registerStyle.css">
     <title>Inscription</title>
 </head>
 
 <body>
 
-<header>
-
-</header>
+<header></header>
 
 <main>
 <div class="register">
  <h1>INSCRIPTION</h1>
     <FORM ACTION="registerPost.php" method="post">
+        <label for="name">Nom</label>
+        <input type="name" name="name"/><br><br>
+
+        <label for="firstname">Prénom</label>
+        <input type="firstname" name="firstname"/><br><br>
+
         <label for="email">Email</label><br>
         <input type="email" name="email"/><br><br>
 
@@ -29,14 +33,12 @@
         <input type="submit" value="S'inscrire"/>
     </FORM>
 
-    <img class="logo" src="img/LOGO_Vparrot.png" alt="logo">
+    <img class="logo" src="../img/LOGO_Vparrot.png" alt="logo">
 
 </div>
 </main>
 
-<footer>
-
-</footer>
+<footer></footer>
 </body>
 
 </html>

@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Mogra&family=Ramaraja&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style_index.css">
+    <link rel="stylesheet" href="../CSS/style_index.css">
     <title>Garage V.Parrot</title>
 </head>
 <body class="grid-container">
@@ -19,8 +19,8 @@
 
     <main>
 
-        <img class="logo" src="img/LOGO_Vparrot.png" alt="logo">
-        <img class="fond" src="img/voitureFond.png" alt="voiture">
+        <img class="logo" src="../img/LOGO_Vparrot.png" alt="logo">
+        <img class="fond" src="../img/voitureFond.png" alt="voiture">
         <p class="slogan">“Laissez votre voiture <br> 
         entre de bonnes mains”</p>
         <div class="service">
