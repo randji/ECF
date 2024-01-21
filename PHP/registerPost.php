@@ -1,8 +1,6 @@
 <?php
+require "PHP/dsn.php";
 
-$dsn = 'mysql:host=localhost;dbname=garageparrot';
-$username = 'root';
-$password = '';
 try {
     $pdo = new PDO($dsn, $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -22,24 +20,7 @@ try {
     $stmt->bindParam(':email', $emailForm);
     $stmt->bindParam(':password', $hashedPassword );
     $stmt->execute();
-
-    echo "<!DOCTYPE html>";
-    echo "<html>";
-    echo "<head>";
-    echo "<title>Inscription Réussie</title>";
-    echo "<style>";
-    echo "  .message-success {";
-    echo "    color: green;";
-    echo "    font-size: 24px;";
-    echo "    text-align: center;";
-    echo "    margin-top: 50px;";
-    echo "  }";
-    echo "</style>";
-    echo "</head>";
-    echo "<body>";
-    echo "  <div class='message-success'>Inscription réussie !</div>";
-    echo "</body>";
-    echo "</html>";
+    require "HTML/sucessRegistre.html";
 }
 
 catch (PDOException $e){
