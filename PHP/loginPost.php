@@ -1,6 +1,6 @@
 <?php
 
-require "PHP/dsn.php";
+require "../PHP/dsn.php";
 
 try {
     $pdo = new PDO($dsn, $username, $password);
@@ -22,15 +22,15 @@ try {
 
         if (password_verify($passwordForm, $monUser['password'])){
             if ($monUser['role'] == 'admin') {
-                require "HTML/dashboardAdmin.html";
+                require "../HTML/dashboardAdmin.html";
             }
             else{
-                require "HTML/dashboardEmploye.html";
+                require "../HTML/dashboardEmploye.html";
             }
         }
     }
         else{
-            require_once "HTML/deniedConnect.html";
+            require_once "../HTML/deniedConnect.html";
         }
 }
 catch (PDOException $e){

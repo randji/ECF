@@ -1,5 +1,5 @@
 <?php
-require "PHP/dsn.php";
+require "../PHP/dsn.php";
 
 try {
     $pdo = new PDO($dsn, $username, $password);
@@ -20,7 +20,7 @@ try {
     $stmt->bindParam(':email', $emailForm);
     $stmt->bindParam(':password', $hashedPassword );
     $stmt->execute();
-    require "HTML/sucessRegistre.html";
+    require "../HTML/sucessRegistre.html";
 }
 
 catch (PDOException $e){
