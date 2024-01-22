@@ -11,11 +11,7 @@
 </head>
 <body class="grid-container">
     
-    <header class="background">
-       
-        <p class="titre">V. PARROT</p>
-         
-    </header>
+<?php require '../TEMPLATE/ header.php' ?>
 
     <main>
 
