@@ -11,7 +11,7 @@
 </head>
 <body class="grid-container">
     
-<?php require '../TEMPLATE/ header.php' ?>
+<?php require '../TEMPLATE/header.php' ; ?>
 
     <main>
 
@@ -19,12 +19,32 @@
         <img class="fond" src="../img/voitureFond.png" alt="voiture">
         <p class="slogan">“Laissez votre voiture <br> 
         entre de bonnes mains”</p>
+
+
+        
         <div class="service">
-            <div class="reparation">Réparation carrosserie</div>
-            <div class="mecanique">Mécanique des voitures</div>
-            <div class="entretien">Entretien régulier</div>
-            <div class="vente">Vente de véhicules d'occasion</div>
+
+            <a href="repairBodywork.php">
+             <button type="button" class="reparation">Réparation de carrosserie</button>
+            </a>
+           
+
+            <a href="mechanicalCar.php">
+             <button type="button" class="mecanique">Mécanique des voitures</button>
+            </a>
+          
+
+            <a href="Maintenance.php">
+             <button type="button" class="entretien">Entretien régulier</button>
+           
+
+            <a href="usedCarSale.php">
+             <button type="button" class="vente">Vente de véhicules d'occasion</button>
+           
         </div>
+
+
+
        <div class="temoignage">
         <p class="intitule">TEMOIGNAGE</p>
         <div class="client">
@@ -43,15 +63,6 @@
        </div>
     </main>
 
-    <footer class="background">
-    
-            <p class="tel">tel: 01 12 25 45 74</p>
-            <div class="horaire">
-                <p class="titreH"><u>HORAIRE</u></p>
-                <p class="planningH">lundi au samedi : 9h-18h <br>dimanche : Fermé</p>
-            </div>
-            <form class="formulaire" action="" >Formulaire <br> de contact</form>
-        
-    </footer>
+    <?php require '../TEMPLATE/footer.php' ; ?>
 </body>
 </html>

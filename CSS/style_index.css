@@ -45,16 +45,16 @@ main{
 .fond{
     grid-area: main;
     width: 350px;
-    opacity: 8%;
     position: relative;
-    right: -8px;
-    top: 220px;
+    left: 5%;
+    top: 290px;
+    z-index: -1;
     
 }
 .logo{
     position: absolute;
     grid-area: main;
-    width: 250px; 
+    width: 200px; 
     left: 50%;
     transform: translate(-50%);
 }
@@ -63,7 +63,7 @@ main{
     font-family: 'Cardo', serif;
     position: relative;
     font-size: 30px;
-    top: -150px;
+    top: -215px;
     left: 10%;
 }
 

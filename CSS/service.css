@@ -1,0 +1,58 @@
+::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+.titre{
+    color: white;
+    font-family: 'Ramaraja', serif;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+}
+body{
+    height: 100vh;
+    margin: 0;
+}
+.background{
+    display: flex;
+    background-color: #151515;
+    color: white;
+    justify-content: center;
+}
+main{
+    position: relative;
+    height: 80vh;
+}
+.logo{
+    position: absolute;
+    width: 200px; 
+    left: 50%;
+    transform: translate(-50%);
+}
+.fond{
+    position: absolute;
+    width: 300px;
+    
+    position: relative;
+    left: 20%;
+    top: 220px;
+    
+}
+footer{
+    position: relative;
+    height: 10vh;
+    font-size: 10px;
+    margin-top: 5px;
+    align-items: center;
+    justify-items: center;
+    
+}
