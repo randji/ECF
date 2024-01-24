@@ -14,12 +14,20 @@
 <?php require '../TEMPLATE/header.php' ; ?>
 
     <main>
+        <?php
+        require '../PHP/loginServiceText.php';
+        if (isset($results)) {
+            foreach ($results as $result) {
+                echo '<div class="title">' . $result['titre'] . '</div>';
+                echo '<div class="text">' . $result['text'] . '</div>';
+            }
+        }
+        ?>
 
-        <img class="logo" src="../img/LOGO_Vparrot.png" alt="logo">
+        <button class="button"onclick="window.location.href = '../HTML/infoForm.html';">Prendre rendez-vous</button>
+
         <img class="fond" src="../img/voitureFond.png" alt="voiture">
     </main>
 
 <?php require '../TEMPLATE/footer.php' ; ?>
     
-</body>
-</html>

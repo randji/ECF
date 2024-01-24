@@ -15,7 +15,16 @@
 
     <main>
 
-        <img class="logo" src="../img/LOGO_Vparrot.png" alt="logo">
+        <?php
+        require '../PHP/loginServiceText.php';
+        if (isset($results)) {
+            foreach ($results as $result) {
+                echo '<div class="title">' . $result['titre'] . '</div>';
+                echo '<div class="text">' . $result['text'] . '</div>';
+            }
+        }
+        ?>
+
         <img class="fond" src="../img/voitureFond.png" alt="voiture">
     </main>
 
