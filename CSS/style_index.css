@@ -28,7 +28,23 @@ header{
     display: flex;
     justify-content: space-between;
 }
-
+breadcrumb .active {
+    font-weight: bold;
+    color:red;
+}
+.breadcrumb{
+    display: flex;
+    flex-direction: row;
+    height: 10px;
+    font-size: 10px;
+    justify-content: space-around;
+    margin: 0;
+}
+li{
+    list-style: none;
+    padding: 2px;
+    text-decoration:none;
+}
 body{
     width: 100%;
     margin: 0;

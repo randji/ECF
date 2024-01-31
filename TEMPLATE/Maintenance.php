@@ -24,10 +24,12 @@
             }
         }
         ?>
+<div class="contact">
+    <button class="button" onclick="window.location.href = '../HTML/infoForm.html';">Prendre rendez-vous</button>
 
-        <button class="button"onclick="window.location.href = '../HTML/infoForm.html';">Prendre rendez-vous</button>
+    <img class="fond" src="../img/voitureFond.png" alt="voiture">
+</div>
 
-        <img class="fond" src="../img/voitureFond.png" alt="voiture">
     </main>
 
 

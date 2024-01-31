@@ -5,10 +5,7 @@
     
 }
 h1{
-
     font-size: 30px;
-
-
 }
 .titre{
     color: white;
@@ -22,8 +19,27 @@ h1{
 header{
     display: flex;
     justify-content: space-between;
-    height: 10vh;
+    height: 20vh;
     margin-bottom: 20px;
+    flex-direction: column;
+}
+.breadcrumb .active {
+    font-weight: bold;
+    color: #f1f1f1;
+}
+.breadcrumb{
+    display: flex;
+    flex-direction: row;
+
+    font-size: 10px;
+    justify-content: space-around;
+    margin: 0;
+}
+li{
+    list-style: none;
+    padding: 2px;
+    text-decoration:none;
+    color: #f1f1f1;
 }
 body{
 
@@ -34,6 +50,7 @@ body{
     background-color: #151515;
     color: white;
     justify-content: center;
+    margin-bottom: 5px;
 }
 main{
     position: relative;
@@ -76,5 +93,14 @@ footer{
     margin-top: 5px;
     align-items: center;
     justify-items: center;
-    
 }
+.contact, .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.button{
+    margin-bottom: 20px;
+}
+
