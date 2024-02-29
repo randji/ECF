@@ -39,6 +39,19 @@ body{
     color: white;
     justify-content: center;
 }
+.connexion{
+    right: 0;
+    position: absolute;
+   font-size: 10px;
+    background-color: white;
+    padding: 5px;
+    margin: 8px;
+    border-radius: 10px;
+    border: 1px solid;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    font-family: 'Mukta Vaani', sans-serif;
+    transition: all 0.2s;
+}
 main{
     position: relative;
 }

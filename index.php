@@ -14,7 +14,9 @@
 <?php require 'TEMPLATE/header.php'; ?>
 
     <main>
-
+        <a href="PHP/login.php">
+            <button type="button" class="connexion">Connexion</button>
+        </a>
         <img class="logo" src="img/LOGO_Vparrot.png" alt="logo">
         <img class="fond" src="img/voitureFond.png" alt="voiture">
         <p class="slogan">“Laissez votre voiture <br> 

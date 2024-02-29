@@ -1,7 +1,7 @@
 <?php
 
 require "../PHP/dsn.php";
-
+require "session.php";
 try {
     $pdo = new PDO($dsn, $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -21,10 +21,12 @@ try {
         $monUser = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if (password_verify($passwordForm, $monUser['password'])){
+            session_regenerate_id(true);
+            $_SESSION['user'] = $monUser;
             if ($monUser['role'] == 'admin') {
-                require "../HTML/dashboardAdmin.html";
+                require "../HTML/dashboardAdmin.php";
             }
-            else{
+            if ($monUser['role'] == 'employe'){
                 require "../HTML/dashboardEmploye.html";
             }
         }
