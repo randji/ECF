@@ -23,8 +23,12 @@ adminOnly();
         <div class="onglet">HORAIRE</div>
         <div class="page">PAGE</div>
         <div class="compte">CREER COMPTE</div>
+
+            <a href="../PHP/logout.php">
+                <button type="button" class="deconnexion">Déconnexion</button>
+            </a>
         
-    </div>
+
 </body>
 </html>
 
