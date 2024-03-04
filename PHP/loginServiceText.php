@@ -1,3 +1,6 @@
+
+// TEXT FILS D'ARIANE
+
 <?php
  require 'dsn.php';
 

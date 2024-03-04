@@ -1,9 +1,6 @@
 <?php
 require "../PHP/dsn.php";
-
-try {
-    $pdo = new PDO($dsn, $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$pdo=connexionBdd($dsn, $username, $password);
 
     $nameForm = $_POST['name'];
     $firstnameForm = $_POST['firstname'];
@@ -21,11 +18,9 @@ try {
     $stmt->bindParam(':password', $hashedPassword );
     $stmt->execute();
     require "../HTML/sucessRegistre.html";
-}
 
-catch (PDOException $e){
-    echo "Erreur lors de l'inscription: ".$e->getMessage();
-}
+
+
 
 
 

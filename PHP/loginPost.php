@@ -2,9 +2,8 @@
 
 require "../PHP/dsn.php";
 require "session.php";
-try {
-    $pdo = new PDO($dsn, $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+$pdo=connexionBdd($dsn, $username, $password);
 
     if (isset($_POST['email']) && isset($_POST['password'])){
         $emailForm = $_POST['email'];
@@ -24,19 +23,17 @@ try {
             session_regenerate_id(true);
             $_SESSION['user'] = $monUser;
             if ($monUser['role'] == 'admin') {
-                require "../HTML/dashboardAdmin.php";
+                require "../admin/dashboardAdmin.php";
             }
             if ($monUser['role'] == 'employe'){
-                require "../HTML/dashboardEmploye.html";
+                require "../employe/dashboardEmploye.php";
             }
         }
     }
         else{
             require_once "../HTML/deniedConnect.html";
         }
-}
-catch (PDOException $e){
-    echo "Erreur lors de l'inscription: ".$e->getMessage();
-}
+
+
 
 

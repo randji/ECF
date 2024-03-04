@@ -1,9 +1,9 @@
 
 <?php
 require_once "../PHP/session.php";
-
 adminOnly();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
