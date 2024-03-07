@@ -1,7 +1,7 @@
 
 <?php
 require "../PHP/session.php";
-require "../PHP/dsn.php";
+require "../dsn.php";
 
 if(session_status() !== PHP_SESSION_ACTIVE) {
     session_start();

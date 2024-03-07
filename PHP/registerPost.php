@@ -1,5 +1,5 @@
 <?php
-require "../PHP/dsn.php";
+require "../dsn.php";
 $pdo=connexionBdd($dsn, $username, $password);
 
     $nameForm = $_POST['name'];

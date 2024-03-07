@@ -11,7 +11,7 @@
 </head>
 <body class="grid-container">
     
-<?php require 'TEMPLATE/header.php'; ?>
+<?php require 'header.php'; ?>
 
     <main>
         <a href="PHP/login.php">
@@ -26,23 +26,23 @@
         
         <div class="service">
 
-            <a href="TEMPLATE/repairBodywork.php">
+            <a href="repairBodywork.php">
              <button type="button" class="reparation">Réparation de carrosserie</button>
             </a>
            
 
-            <a href="TEMPLATE/mechanicalCar.php">
+            <a href="mechanicalCar.php">
              <button type="button" class="mecanique">Mécanique des voitures</button>
             </a>
           
 
-            <a href="TEMPLATE/Maintenance.php">
+            <a href="Maintenance.php">
              <button type="button" class="entretien">Entretien régulier</button>
-           
+            </a>
 
-            <a href="TEMPLATE/usedCarSale.php">
+            <a href="usedCarSale.php">
              <button type="button" class="vente">Vente de véhicules d'occasion</button>
-           
+            </a>
         </div>
 
 
@@ -64,7 +64,8 @@
         
        </div>
     </main>
-
-    <?php require 'TEMPLATE/footer.php'; ?>
+<footer>
+    <?php require 'footer.php' ?>
+</footer>
 </body>
 </html>

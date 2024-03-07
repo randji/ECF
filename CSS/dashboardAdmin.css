@@ -103,6 +103,11 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 32px;
 }
+.horaire{
+    position: relative;
+    top: 250px;
+    left: 150px;
+}
 .deconnexion{
     position: absolute;
     top: 400px;

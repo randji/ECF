@@ -1,9 +1,11 @@
 <?php
 
-require "../PHP/dsn.php";
+require_once dirname(__DIR__) . '/dsn.php';
 require "session.php";
+var_dump($_POST);
 
 $pdo=connexionBdd($dsn, $username, $password);
+
 
     if (isset($_POST['email']) && isset($_POST['password'])){
         $emailForm = $_POST['email'];
@@ -23,10 +25,11 @@ $pdo=connexionBdd($dsn, $username, $password);
             session_regenerate_id(true);
             $_SESSION['user'] = $monUser;
             if ($monUser['role'] == 'admin') {
-                require "../admin/dashboardAdmin.php";
+                header('Location: ../admin/dashboardAdmin.php');
+                
             }
             if ($monUser['role'] == 'employe'){
-                require "../employe/dashboardEmploye.php";
+                header('Location: ../employe/dashboardEmploye.php');
             }
         }
     }

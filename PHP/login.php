@@ -23,7 +23,7 @@ require "session.php"
 <main>
     <div class="register">
         <h1>CONNECTION</h1>
-        <form action="../PHP/loginPost.php" method="post">
+        <form action="loginPost.php" method="post">
 
             <label for="email">Email</label><br>
             <input type="email" name="email" required/><br><br>

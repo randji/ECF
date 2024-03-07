@@ -1,5 +1,5 @@
 <?php
-require "../PHP/dsn.php";
+require "../dsn.php";
 require "../PHP/session.php";
 
 if(session_status() !== PHP_SESSION_ACTIVE) {

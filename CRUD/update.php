@@ -1,6 +1,6 @@
 <?php
 require "../PHP/session.php";
-require "../PHP/dsn.php";
+require "../dsn.php";
 
 $pdo=connexionBdd($dsn, $username, $password);
 

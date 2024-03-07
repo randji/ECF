@@ -14,4 +14,6 @@ function connexionBdd($dsn, $username, $password)
         error_log("Erreur lors de la connexion à la base de données: " . $e->getMessage());
         exit('Une erreur s\'est produite lors de la connexion à la base de données. Veuillez réessayer plus tard.');
     }
+    
 }
+

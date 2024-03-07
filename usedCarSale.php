@@ -6,17 +6,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Mogra&family=Ramaraja&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/service.css">
+    <link rel="stylesheet" href="CSS/service.css">
     <title>Vente voiture d'occasion</title>
 </head>
 <body>
 
-<?php require 'header.php' ; ?>
+<?php require 'header.php'; ?>
 
     <main>
 
         <?php
-        require '../PHP/loginServiceText.php';
+        require 'PHP/loginServiceText.php';
         if (isset($results)) {
             foreach ($results as $result) {
                 echo '<div class="title">' . $result['titre'] . '</div>';
@@ -25,10 +25,10 @@
         }
         ?>
 
-        <img class="fond" src="../img/voitureFond.png" alt="voiture">
+        <img class="fond" src="img/voitureFond.png" alt="voiture">
     </main>
 
-<?php require 'footer.php' ; ?>
+<?php require 'footer.php'; ?>
     
 </body>
 </html>
