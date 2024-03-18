@@ -71,7 +71,7 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <button type="button" class="horaire">HORAIRE</button>
             </a>
 
-    <a href="creercomptePost.php">
+    <a href="register.php">
         <button type="button" class="compte">CREER COMPTE</button>
     </a>
 

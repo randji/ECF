@@ -4,7 +4,7 @@
     padding: 0;
     
 }
-.grid-container{
+body{
     display: grid;
     grid-template-rows: 10% auto 10% ;
     height: 100vh;
@@ -163,6 +163,6 @@ footer{
     margin : 4px;
 }
 .formulaire{
-    margin: 4px;
+    padding-right: 5%;
     font-family: 'mogra', sans-serif;
 }
