@@ -1,6 +1,7 @@
 <?php
 require "../dsn.php";
 require "../PHP/session.php";
+require "../function/usedCarRegistrer.php";
 
 if(session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
@@ -10,28 +11,9 @@ $pdo=connexionBdd($dsn, $username, $password);
 
 if($_POST){
 
-    if(isset($_FILES['image'])) {
-        $errors = array();
-        $file_name = $_FILES['image']['name'];
-        $file_size = $_FILES['image']['size'];
-        $file_tmp = $_FILES['image']['tmp_name'];
-        $file_type = $_FILES['image']['type'];
-        $file_parts = explode('.', $_FILES['image']['name']);
-        $file_ext = strtolower(end($file_parts));
-
-        $extensions = array("jpeg", "jpg", "png");
-
-        if(empty($errors)==true){
-            $upload_dir = "../img/";
-            if (!is_dir($upload_dir)) {
-                mkdir($upload_dir, 0755, true);
-            }
-            move_uploaded_file($file_tmp, $upload_dir . $file_name);
-            $image = $upload_dir . $file_name;
-        }else{
-            print_r($errors);
-        }
-    }
+    $image1 = uploadImage('image1');
+    $image2 = uploadImage('image2');
+    $image3 = uploadImage('image3');
     $model = $_POST['model'];
     $price = $_POST['price'];
     $years = $_POST['years'];
@@ -41,9 +23,9 @@ if($_POST){
     $equipement = $_POST['equipement'];
 
 
-    $sql = "INSERT INTO garageparrot.cars (model, price, photo,yearsService,numberKm,gearbox,carburant,equipement) VALUES (:model, :price, :image, :years, :km, :gears, :carburant, :equipement)";
+    $sql = "INSERT INTO garageparrot.cars (model, price, photo,yearsService,numberKm,gearbox,carburant,equipement,photo2,photo3) VALUES (:model, :price, :image1, :years, :km, :gears, :carburant, :equipement, :image2, :image3)";
     $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':image', $image);
+    $stmt->bindParam(':image1', $image1);
     $stmt->bindParam(':model', $model);
     $stmt->bindParam(':price', $price);
     $stmt->bindParam(':years', $years);
@@ -51,6 +33,8 @@ if($_POST){
     $stmt->bindParam(':gears', $gears);
     $stmt->bindParam(':carburant', $carburant);
     $stmt->bindParam(':equipement', $equipement);
+    $stmt->bindParam(':image2', $image2);
+    $stmt->bindParam(':image3', $image3);
     $stmt->execute();
 
    /* $_session['message'] = "Page ajoutée avec succès";
@@ -81,8 +65,12 @@ if($_POST){
 <main class="back">
     <h1 class="title">Ajouter véhicule</h1>
             <form method="POST" enctype="multipart/form-data">
-                <label for="image">IMAGE</label>
-                <input type="file" name="image" required/><br><br>
+                <label for="image1">IMAGE 1</label>
+                <input type="file" name="image1" required/><br><br>
+                <label for="image2">IMAGE 2</label>
+                <input type="file" name="image2" required/><br><br>
+                <label for="image3">IMAGE 3</label>
+                <input type="file" name="image3" required/><br><br>
                 <label for="model">Modèle</label>
                 <input type="text" name="model" required/><br><br>
                 <label for="price">Prix</label>

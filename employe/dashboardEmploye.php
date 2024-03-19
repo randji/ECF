@@ -23,7 +23,7 @@ require_once "../PHP/session.php";
 
 
 
-    <a href="../PHP/logout.php">
+    <a href="../CRUD/createUsedCard.php">
         <button type="button" class="vehicule">ajouter véhicule</button>
     </a>
 
