@@ -40,7 +40,7 @@ $voiture = $stmt->fetch(PDO::FETCH_ASSOC);
         <p>Carburant : <?=$voiture['carburant']?></p>
         <p>Equipement : <?=$voiture['equipement']?></p>
         <a href="detailCar.php?id=<?=$voiture['id_car'] ?>">
-            <button type="button" class="detail">details</button>
+            <button type="button" class="detail">rendre rendez vous</button>
         </a>
     </div>
 

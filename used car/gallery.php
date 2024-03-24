@@ -69,6 +69,7 @@ else if (isset($_POST['minPrice']) && isset($_POST['maxPrice'])) {
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="../CSS/galleryStyle.css">
+    <link rel="stylesheet" href="../CSS/galleryMediaQueries.css">
     <title>galerie voiture d'occasion</title>
 </head>
 
@@ -81,17 +82,17 @@ else if (isset($_POST['minPrice']) && isset($_POST['maxPrice'])) {
     <nav class="navbar">
         <h1 class="title">FILTRE</h1>
         
-        <label class="titleSlide" for="price-slider">Prix :</label> 
-        <div class="containerSlider"> 
+        <label class="titleSlide1" for="price-slider">PRIX :</label> 
+        <div class="containerSlider1"> 
             <span class="min">min:</span>
             <span class="minValue" id="minPrice"> 0</span>
         <div class="slider" id="price-slider"></div>
             <span class="max">max:</span>
-            <span id="maxPrice">100000</span>
+            <span class="maxValue" id="maxPrice">100000</span>
         </div>
 
-        <label class="titleSlide" for="km-slider">Kilométrage : </label>
-        <div class="containerSlider">
+        <label class="titleSlide2" for="km-slider">KILOMETRAGE : </label>
+        <div class="containerSlider2">
             <span class="min">min:</span>
             <span class="minValue" id="minkm">0</span>
         <div class="slider" id="km-slider"></div>
@@ -99,12 +100,14 @@ else if (isset($_POST['minPrice']) && isset($_POST['maxPrice'])) {
             <span class="maxValue" id="maxkm">300000</span>
         </div>
 
-        <label class="titleSlide" for="year-slider">Année : </label>
-        <div class="containerSlider">
+        <label class="titleSlide2" for="year-slider">ANNEE : </label>
+        <div class="containerSlider3">
             <span class="minValueYear" id="minYear">2010</span>
         <div class="slider" id="year-slider"></div>
             <span class="maxValueYear" id="maxYear">2023</span>
         </div>
+
+    <img class="logo" src="../img/logo_Vparrot.png" alt="logo garage parrot">
         
     </nav>
 

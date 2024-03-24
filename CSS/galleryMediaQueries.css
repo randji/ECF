@@ -1,0 +1,38 @@
+@media screen and (min-width: 768px) {
+    body{
+        display: grid;
+        margin: 0;
+        grid-template-rows: 10% auto 15% ;
+        grid-template-columns: 40% 60%;
+        height: 100vh;
+        grid-template-areas: 
+        'header header'
+        'navbar gallery'
+        'footer footer';
+    }
+    .navbar{
+        height:300px;
+        
+    }
+    .logo{
+        display: flex;
+        position: relative;
+        top: 100px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 400px;
+    }
+   .cars-container{
+        margin-left: 20px;
+        padding-left: 30px;
+        border-left: 2px solid rgb(228, 228, 228, 2);
+   } 
+   .containerSlider3{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0px;
+    margin-bottom: 15px;
+    font-family: 'Ramaraja', serif;
+    }
+    
+}

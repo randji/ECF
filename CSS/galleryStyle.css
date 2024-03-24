@@ -2,7 +2,7 @@
 body{
     display: grid;
     margin: 0;
-    grid-template-rows: 10% 40% auto 10% ;
+    grid-template-rows: 10% 50% auto 15% ;
     height: 100vh;
     grid-template-areas: 
     'header'
@@ -19,17 +19,20 @@ header{
     justify-content: center;
 }
 
+/* ---------------------FILTER--------------------- */
 .navbar{
     grid-area: navbar;
     flex-direction: column;
     display: flex;
-    margin-top: 10px;
+    margin-top: 50px;
     margin-left: 5%;
     margin-right: 5%;
-    border: 1px solid;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-    /* align-items: center; */
-    justify-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3); 
+}
+.logo{
+    display: none;
 }
 .title{
     margin-top: 10px;  
@@ -44,60 +47,101 @@ header{
     font-family: 'Ramaraja', serif;
     font-size: 20px;
 }
-
 .slider{
     display: flex;
     flex-direction: row;
-    width: 150px;
-    height: 50xp;
+    width: 150px; 
+}
+.ui-slider-handle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid;
+}
+.titleSlide1, .titleSlide2, .titleSlide3{
+    position: relative;
+    font-family: 'Ramaraja', serif;
+    font-size: 15px;
+    text-decoration: underline;
+}
+.titleSlide2{
+    margin-bottom: 5px;
 }
 .titleSlide{
+    position: relative;
+    left: -10px;
+}
+.min, .max, .minValue, .maxValue, .minValueYear, .maxValueYear{
+    position: relative;
     font-family: 'Ramaraja', serif;
+    position: relative;
+    top: -5px;
 }
-.min{
-    padding-right: 5px;
+
+.min, .max{
+    padding-right: 5px;  
 }
-.minValue{
-    padding-right: 20px;
-}
-.max{
-    padding-left: 15px;
-    padding-right: 5px;
-}
-.containerSlider{
+
+.containerSlider1, .containerSlider2{
     display: flex;
     flex-direction: row;
     margin-left: 0px;
     margin-bottom: 15px;
     font-family: 'Ramaraja', serif;
 }
-.minValueYear{
-    padding-right: 15px;
+.containerSlider3{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0px;
+    margin-bottom: 15px;
+    font-family: 'Ramaraja', serif;
+    justify-content: center;
 }
-.maxValueYear{
-    padding-left: 15px;
+.slider{
+    margin-left: 20px;
+    margin-right: 20px;
+    
 }
+
+/* ------------------GALLERY CARS USED-------------- */
 .cars-container{
     grid-area: gallery;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .card{
     grid-area: gallery;
     flex-direction: column;
     display: flex;
-    width: 200px;
+    width: 250px;
     height: auto;
     margin: 10px;
     border-radius: 15px;
-    border: 1px solid;
     box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 }
 .imgCar{
-    width: 200px;
-    height: 150px;
+    width: 250px;
+    height: auto;
     border-radius: 15px 15px 0px 0px;
+}
+p{
+    padding-left: 10px;
+}
+.detail{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 10px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    background-color: rgb(228, 228, 228, 0.3); ;
+    border: 1px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 50px;
+
 }
 footer{
     grid-area: footer;
@@ -109,12 +153,14 @@ footer{
     font-size: 10px;
     align-items: center;
     justify-items: center;
+    margin-top: 20px;
 }
 .horaire{
     grid-area: footer;
     text-align: center;
     margin-left: 30px;
     margin-right: 30px;
+
 }
 .titreH{
     padding-bottom: 10px;
