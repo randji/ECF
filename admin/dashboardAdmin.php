@@ -47,9 +47,13 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php
             unset($_SESSION['message']);
         } ?>
+
+
         <div class="title">
             <h1>tableau de bord<br>ADMINISTRATEUR</h1>
         </div>
+
+
         <div class="page">
             <h2>PAGE</h2>
             <form action="pagePost.php" method="POST">
@@ -57,30 +61,27 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <?php
                 foreach ($results as $result) {
                     echo "<option value='".$result['id_pageName']."'>".$result['namePage']."</option>";
-                }
-                ?>
+                }?>
             </select>
             <input type="submit" value="Sélectionner" class="inputPage"/>
             </form>
         </div>
 
+
+        <a href="horairePost.php">
+            <button type="button" class="horaire">HORAIRE</button>
+        </a>
+
+        <a href="register.php">
+            <button type="button" class="compte">CREER COMPTE</button>
+        </a>
+
+
+        <a href="../PHP/logout.php">
+            <button type="button" class="deconnexion">Déconnexion</button>
+        </a>
+
     </div>
-
-
-            <a href="horairePost.php">
-                <button type="button" class="horaire">HORAIRE</button>
-            </a>
-
-    <a href="register.php">
-        <button type="button" class="compte">CREER COMPTE</button>
-    </a>
-
-
-            <a href="../PHP/logout.php">
-                <button type="button" class="deconnexion">Déconnexion</button>
-            </a>
-        
-
 </body>
 </html>
 

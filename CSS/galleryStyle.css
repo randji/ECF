@@ -24,7 +24,7 @@ header{
     grid-area: navbar;
     flex-direction: column;
     display: flex;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 5%;
     margin-right: 5%;
     padding-left: 5px;
@@ -104,6 +104,11 @@ header{
 }
 
 /* ------------------GALLERY CARS USED-------------- */
+
+main{
+    grid-area: gallery;
+    position: relative;
+}
 .cars-container{
     grid-area: gallery;
     display: flex;
@@ -114,6 +119,7 @@ header{
 .card{
     grid-area: gallery;
     flex-direction: column;
+    position: relative;
     display: flex;
     width: 250px;
     height: auto;

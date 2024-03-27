@@ -6,9 +6,8 @@ body {
     background-repeat: no-repeat;
 }
 .back{
-    
     position: relative;
-    top: 25%;
+    top: 20%;
     left: 10%;
     width: 80%;
     height: 60vh;
@@ -17,8 +16,15 @@ body {
     backdrop-filter: blur(5px);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     border: 1px solid rgba(255, 255, 255, 0.18);
-    /* border-radius: 32px; */
 }
+
+.onglet, .page, .selectPage, .inputPage, .compte, .deconnexion{
+    background: linear-gradient(135deg, rgba(255, 255, 255,0.9), rgba(255,255,255,0));
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 32px;
+}  
+
 .title{
     top: 10%;
     left: 10%;
@@ -29,11 +35,9 @@ body {
     color: white;
     font-size: 10px;
     background: linear-gradient(135deg, rgba(255, 255, 255,0.9), rgba(255,255,255,0));
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     border: 1px solid rgba(255, 255, 255, 0.18);
-    /* border-radius: 32px; */
+    
 
 }
 .onglet{
@@ -46,11 +50,6 @@ body {
     justify-content: center;
     width: 200px;
     height: 50px;
-    background: linear-gradient(135deg, rgba(255, 255, 255,0.9), rgba(255,255,255,0));
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 32px;
-    
 }
 .page{
     margin: 10px;
@@ -58,16 +57,13 @@ body {
     display: flex;
     flex-direction: column;
     width: 250px;
-    height: 100px;
-    top: 200px;
-    left: 50px;
+    height: 150px;
+    top: 80px;
     color: white;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(255, 255, 255,0.9), rgba(255,255,255,0));
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 32px;
+    left: 50%;
+    transform: translate(-50%);
 }
 .titrePage{
     text-decoration: none;
@@ -77,17 +73,9 @@ body {
 .selectPage{
     margin: 10px;
     padding: 5px;
-    background: linear-gradient(135deg, rgba(255, 255, 255,0.9), rgba(255,255,255,0));
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 32px;
+   
 }
-.inputPage{
-    background: linear-gradient(135deg, rgba(255, 255, 255,0.9), rgba(255,255,255,1.5));
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 32px;
-}
+
 .compte{
     position: absolute;
     top: 300px;
@@ -98,10 +86,7 @@ body {
     justify-content: center;
     width: 200px;
     height: 50px;
-    background: linear-gradient(135deg, rgba(255, 255, 255,0.9), rgba(255,255,255,0));
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 32px;
+    
 }
 .horaire{
     position: relative;
@@ -118,8 +103,5 @@ body {
     justify-content: center;
     width: 200px;
     height: 50px;
-    background: linear-gradient(135deg, rgba(255, 255, 255,0.9), rgba(255,255,255,0));
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 32px;
+    
 }

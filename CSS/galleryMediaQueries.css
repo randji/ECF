@@ -3,7 +3,7 @@
         display: grid;
         margin: 0;
         grid-template-rows: 10% auto 15% ;
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 30% 70%;
         height: 100vh;
         grid-template-areas: 
         'header header'
@@ -11,19 +11,28 @@
         'footer footer';
     }
     .navbar{
-        height:300px;
-        
+        position: fixed; 
+        height:300px; 
+        top: 10%;
+        margin-right: 0px;
+        margin-left: 50px;
+    }
+    main{
+       position: relative;
+       width: 900px;
+       margin-left: 0px;
     }
     .logo{
         display: flex;
         position: relative;
-        top: 100px;
+        top: 50px;
         left: 50%;
         transform: translate(-50%);
-        width: 400px;
+        width: 300px;
     }
    .cars-container{
-        margin-left: 20px;
+        grid-area: gallery;
+        margin-left: 0px;
         padding-left: 30px;
         border-left: 2px solid rgb(228, 228, 228, 2);
    } 
@@ -33,6 +42,12 @@
     margin-left: 0px;
     margin-bottom: 15px;
     font-family: 'Ramaraja', serif;
+    }
+    .background{
+        font-size: 20px;
+    }
+    .titreH{
+        font-size: 20px;
     }
     
 }

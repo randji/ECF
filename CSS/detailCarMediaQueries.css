@@ -1,0 +1,46 @@
+@media screen and (min-width: 768px){
+    header{
+        font-size: 70px;
+    }
+    .card{
+        grid-area: gallery;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+        display: flex;
+        top: 20px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 810px;
+        height: auto;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    }
+    .imgCar{
+        width: 250px;
+        height: auto;
+        border-radius: 15px 15px 0px 0px;
+        margin: 10px;
+    }
+    .galleryItems{
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+    }
+    .background{
+        font-size: 20px;
+    }
+    .titreH{
+        font-size: 20px;
+    }
+    a{
+        position: absolute;
+        right: 20px;
+        bottom: 5px;
+    }
+    .detail{
+        font-size: 18px;
+        width: 150px;
+    }
+}
