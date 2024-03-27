@@ -2,6 +2,7 @@
 
 <?php
 require "../dsn.php";
+require "../function/filterCarUsed.php";
 
 $pdo=connexionBdd($dsn, $username, $password);
 
@@ -23,24 +24,28 @@ if (isset($_POST['getAllCars']) && $_POST['getAllCars'] === 'true') {
 } 
 
 else if (isset($_POST['minPrice']) && isset($_POST['maxPrice'])) {
-    // Récupérer les voitures dans la plage de prix et les renvoyer
-    $minPrice = $_POST['minPrice'];
-                $maxPrice = $_POST['maxPrice'];
-        
-                try {
-                    $sql=  "SELECT * FROM garageparrot.cars WHERE price BETWEEN :minPrice AND :maxPrice";
-                    $stmt = $pdo->prepare($sql);
-                    $stmt->execute([':minPrice' => $minPrice, ':maxPrice' => $maxPrice]);
-                    $voitures = $stmt->fetchall(PDO::FETCH_ASSOC);
-        
-                    echo json_encode($voitures);
-                } catch (PDOException $e) {
-                    // Envoie l'erreur au client
-                    echo json_encode(['error' => 'Une erreur est survenue lors de la récupération des voitures : ' . $e->getMessage()]);
-                }
-                
-                exit;
-            }
+    $column = 'price';
+    $min= $_POST['minPrice'];
+    $max= $_POST['maxPrice'];
+    $voitures=filter($column, $min, $max, $pdo);
+    exit;
+}
+
+else if (isset($_POST['minkm']) && isset($_POST['maxkm'])) {
+    $column = 'numberKm';
+    $min= $_POST['minkm'];
+    $max= $_POST['maxkm'];
+    $voitures=filter($column, $min, $max, $pdo);
+    exit;
+}
+
+else if (isset($_POST['minYear']) && isset($_POST['maxYear'])) {
+    $column = 'yearsService';
+    $min= $_POST['minYear'];
+    $max= $_POST['maxYear'];
+    $voitures=filter($column, $min, $max, $pdo);
+    exit;
+}
         
 
 
@@ -243,9 +248,22 @@ $(document).ready(function() {
         slide: function(event, ui) {
             minKmDisplay.textContent = ui.values[0];
             maxKmDisplay.textContent = ui.values[1];
-        }
-    });
-});
+        },
+        stop: function(event, ui) {
+                    $.ajax({
+                    url: 'gallery.php',
+                    type: 'POST',
+                    data: {
+                        minPrice: ui.values[0],
+                        maxPrice: ui.values[1]
+                    },
+                    success: function(data) {
+                        console.log('updateCarsTable called'); updateCarsTable(data);
+                    }
+                    });
+                }
+            }); 
+        });
 
 $(document).ready(function() {
     var minYearDisplay = document.getElementById('minYear');
@@ -259,9 +277,22 @@ $(document).ready(function() {
         slide: function(event, ui) {
             minYearDisplay.textContent = ui.values[0];
             maxYearDisplay.textContent = ui.values[1];
-        }
-    });
-});
+        },
+        stop: function(event, ui) {
+                    $.ajax({
+                    url: 'gallery.php',
+                    type: 'POST',
+                    data: {
+                        minYear: ui.values[0],
+                        maxYear: ui.values[1]
+                    },
+                    success: function(data) {
+                        console.log('updateCarsTable called'); updateCarsTable(data);
+                    }
+                    });
+                }
+            }); 
+        });
 </script>
 </body>
 </html>
