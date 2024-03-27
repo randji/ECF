@@ -1,0 +1,101 @@
+@media screen and (min-width: 768px){
+    body{
+        display: grid;
+        margin: 0;
+        grid-template-rows: 10% auto 15% ;
+        height: 100vh;
+        grid-template-areas: 
+        'header'
+        'form'
+        'footer';
+        margin: 0;
+        background-image: url("../img/fondOpinion.jpeg");
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .header{
+        grid-area: header;
+    }
+    header{
+        grid-area: header;
+        display: flex;
+        background-color: #151515;
+        color: white;
+        justify-content: center;
+    }
+    .form{
+        position: relative;
+        width: 300px;
+        height: 75%;
+        top: 10%;
+        width: 60%;
+        left: 50%;
+        transform: translate(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+        background: linear-gradient(135deg, rgba(255, 255, 255,0.9), rgba(255,255,255,0));
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .star-rating {
+        width: 150px;
+        font-size: 24px;
+        padding: 5px;
+        color: #444;
+        margin: 0 auto;
+        position: relative;
+        left: 0px;
+        margin: 0;
+        
+    }
+    
+    .star-rating input {
+        display: none;
+    }
+    
+    .star-rating label {
+        float: right;
+        padding: 0 5px;
+    }
+    
+    .star-rating input:checked ~ label {
+        color: #fd4;
+    }
+    
+    .star-rating:not(:checked) > label:hover,
+    .star-rating:not(:checked) > label:hover ~ label {
+        color: #fd4;
+    }
+    
+    .star-rating input:checked + label:hover,
+    .star-rating input:checked ~ label:hover,
+    .star-rating label:hover ~ input:checked ~ label,
+    .star-rating input:checked ~ label:hover ~ label {
+        color: #fd4;
+    }
+    footer{
+        grid-area: footer;
+        font-family: 'Ramaraja', serif;
+        display: flex;
+        justify-content: space-between;
+        background-color: #151515;
+        color: white;
+        font-size: 20px;
+        align-items: center;
+        justify-items: center;
+        margin-top: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .titreH{
+        font-size: 20px;
+    }
+
+}
+
