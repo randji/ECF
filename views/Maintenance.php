@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Mogra&family=Ramaraja&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/service.css">
+    <link rel="stylesheet" href="../CSS/service.css">
     <title>Entretien régulier</title>
 </head>
 <body>
@@ -25,9 +25,9 @@
         }
         ?>
 
-        <button class="button"onclick="window.location.href = 'HTML/infoForm.html';">Prendre rendez-vous</button>
+        <button class="button"onclick="window.location.href = '../HTML/infoForm.html';">Prendre rendez-vous</button>
 
-        <img class="fond" src="img/voitureFond.png" alt="voiture">
+        <img class="fond" src="../img/voitureFond.png" alt="voiture">
     </main>
 
 

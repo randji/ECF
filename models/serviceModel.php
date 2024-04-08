@@ -6,20 +6,42 @@ class pagename
 {
     private int $id_pageName;
     private string $namePage;
-}
-
-class page{
-    private int $id_page;
-    private string $titre;
-    private string $text;
-    private int $id_pageName;
     private $pdo;
 
     public function __construct($pdo)
     {
         $this->pdo = $pdo;
+        return $this->pdo;
     }
-    public function getPage($id_page, $titre, $text, $id_pageName){
+
+    public function getShowPagename($id_pageName, $namePage)
+    {
+        try {
+            $pdo = new PDO($dsn, $username, $password);
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            $currentPage = basename($_SERVER['PHP_SELF']);
+
+            $stmt = $pdo->prepare("SELECT id_pageName, namePage FROM garageparrot.pageName");
+
+            $stmt->execute();
+
+            $id_pageName = $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+        return $id_pageName;
+
+    }
+}
+class page extends \theService\pagename{
+    private int $id_page;
+    private string $titre;
+    private string $text;
+
+
+
+    public function getShowPage($id_page, $titre, $text, $id_pageName){
         try{
             $pdo = new PDO($dsn, $username, $password);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -47,12 +69,12 @@ class page{
 
             $stmt->execute([':pagename' => $pagename]);
 
-            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $pages = $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
         catch(PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
-        return $results;
+        return $pages;
     }
 }
 

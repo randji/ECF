@@ -26,6 +26,9 @@ require_once "../PHP/session.php";
     <a href="../CRUD/createUsedCard.php">
         <button type="button" class="vehicule">ajouter véhicule</button>
     </a>
+    <a href="opinionVisitor.php">
+        <button type="button" class="opinion">avis visiteur</button>
+    </a>
 
         <a href="../PHP/logout.php">
             <button type="button" class="deconnexion">Déconnexion</button>

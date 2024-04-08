@@ -8,6 +8,8 @@ body{
     display: grid;
     grid-template-rows: 10% auto 10% ;
     height: 100vh;
+    width: 100%;
+    margin: 0;
     grid-template-areas: 
     'header'
     'main'
@@ -15,7 +17,7 @@ body{
 }
 
 .titre{
-    color: white;
+    color: #FCFCFC;
     font-family: 'Ramaraja', serif;
     font-size: 40px;
     display: flex;
@@ -29,31 +31,28 @@ header{
     justify-content: space-between;
 }
 
-body{
-    width: 100%;
-    margin: 0;
-}
 .background{
     display: flex;
-    background-color: #151515;
-    color: white;
+    background-color:#202020;
+    color: #FCFCFC;
     justify-content: center;
 }
 .connexion{
-    right: 0;
+    right: 10px;
     position: absolute;
-   font-size: 10px;
-    background-color: white;
+    font-size: 10px;
+    background-color: #F0F0F0;
     padding: 5px;
     margin: 8px;
     border-radius: 10px;
-    border: 1px solid;
+    border: 1px solid #D9D9D9;
     box-shadow: 0 5px 10px rgba(0,0,0,0.3);
     font-family: 'Mukta Vaani', sans-serif;
     transition: all 0.2s;
 }
 main{
     position: relative;
+    
 }
 .fond{
     grid-area: main;
@@ -90,32 +89,29 @@ main{
     
 }
 .reparation, .mecanique, .entretien, .vente{
-    background-color: #f1f1f1;
+    background-color: #F0F0F0;
     padding: 5px;
     margin: 8px;
-    border: 2px solid;
+    border: 1px solid #D9D9D9;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.3);
     font-family: 'Mukta Vaani', sans-serif;
     transition: all 0.2s;
 }
 .reparation:hover, .mecanique:hover, .entretien:hover, .vente:hover{
-    background-color: rgba(235, 168, 58, 0.87);
+    background-color: #E8E8E8;
+    border: 1px solid #BBBBBB;
 }
-footer{
-    grid-area: footer;
-    font-size: 10px;
-    margin-top: 5px;
-    align-items: center;
-    justify-items: center;
-    
-}
+
 
 .temoignage{
     grid-area: main;
+    position: relative;
     display: flex;
+    top: 40px;
     flex-wrap: wrap;
-    justify-content: center;   
+    justify-content: center;
+    margin-bottom: 50px;   
 }
 .intitule{
     font-family: 'Ramaraja', serif;
@@ -123,28 +119,38 @@ footer{
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
 .client{
+    position: relative;
     margin: 5px 20px 15px 25px;
     font-family: 'mogra', sans-serif;
-    color: white;
-    background-color: black; 
+    color: #202020;
+    background-color:#F0F0F0; 
     box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-    border: 2px solid black;
+    border: 1px solid #D9D9D9;
     border-radius: 10px;
 }
 .nom{
-    color: #f1b660;
+    color: #202020;
     font-size: 20px;
     margin-left: 10px;
+}
+
+.commentaire{
+    padding: 10px;
+}
+footer{
+    grid-area: footer;
+    font-size: 10px;
+    height: 100%;
+    align-items: center;
+    justify-items: center;  
 }
 .horaire{
     grid-area: footer;
     text-align: center;
     margin-left: 30px;
     margin-right: 30px;
-}
-.commentaire{
-    padding: 10px;
 }
 .titreH{
     padding-bottom: 10px;
@@ -165,4 +171,44 @@ footer{
 .formulaire{
     padding-right: 5%;
     font-family: 'mogra', sans-serif;
+}
+
+/*------------ANIMATION TEMOIGNAGE------------*/
+
+.temoignage > div {
+    visibility: hidden;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: visible;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: visible;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.animate-left {
+    animation: slideInFromLeft 1s forwards;
+}
+
+.animate-right {
+    animation: slideInFromRight 1s forwards;
 }

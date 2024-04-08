@@ -1,6 +1,6 @@
 <?php
 
-require_once "dsn.php";
+require_once "../dsn.php";
 $pdo=connexionBdd($dsn, $username, $password);
 
 $sql=  "SELECT * FROM garageparrot.schedule";
