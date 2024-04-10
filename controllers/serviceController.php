@@ -1,70 +1,95 @@
 <?php
 
+namespace Controllers;
 
-class serviceController
+class ServiceController extends Controller
 {
+    public function route(): void
+    {
+        if ( isset($_GET ['action']))
+        {
+                switch ($_GET ['action']){
+                    case 'home':
+                        //appeler la methode repair
+                        var_dump('on appelle repair');
+                        break;
+                    case 'homeController':
+                        echo 'on charge homeController';
+                        var_dump('on charge homeController');
+                        //charger controller home
+                        break;
+                    case 'serviceController':
+                        //charger controller service
+                        break;
+                    case 'connexionController':
+                        //charger controller connexion
+                        break;
+                    case 'formContactController':
+                        //charger controller formContact
+                        break;
+                        break;
+                    default :
+                        //erreur
+                        break;
+                }
+            }else{
+                //charger page acceuil
+            }
+    }
+
+
+
+    protected function repair()
+        {
+            $params = ['test'=> 'abc'];
+            $this ->render('page/about',$params);
+        }
+
 
     public function getShowText()
-    {
-
-        try {
-            $pdo = new Database();
-            $pdo = $pdo->getConnection();
-            if(isset($pdo)){
-                echo "Connected successfully";
+        {
+            try 
+            {
+                $pdo = new Database();
+                $pdo = $pdo->getConnection();
+                if(isset($pdo)){
+                    echo "Connected successfully";
+                }
+                else{
+                    echo "Not connected";
+                }
+                
+                $pagename = $_GET['id'];
+                
+                
+                if(isset ($pagename)){
+                    $stmt = $pdo->prepare("SELECT titre, text FROM garageparrot.page WHERE pagename = :pagename");
+    
+                $stmt->execute([':pagename' => $pagename]);
+    
+                $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                var_dump($results);
+                return $results;
+                
+                }
+                else{
+                    header ('HTTP/1.1 404 not found');
+                }
+                
             }
-            else{
-                echo "Not connected";
-            }
-            $currentPage = basename($_SERVER['PHP_SELF']);
             
-            switch ($currentPage) {
-                case 'Maintenance.php':
-                    $pagename = 2;
-                    break;
-                case 'mechanicalCar.php':
-                    $pagename = 3;
-                    break;
-                case 'usedCarSale.php':
-                    $pagename = 4;
-                    break;
-                case 'repairBodywork.php':
-                    $pagename = 1;
-                    break;
-                default:
-                    $pagename = 1;
-                var_dump($pagename);
-            } 
-            if(isset ($pagename)){
-                $stmt = $pdo->prepare("SELECT titre, text FROM garageparrot.page WHERE pagename = :pagename");
-
-            $stmt->execute([':pagename' => $pagename]);
-
-            $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            var_dump($results);
-            return $results;
-            
+            catch(PDOException $e) {
+                echo "Error: " . $e->getMessage();
             }
-            else{
-                header ('HTTP/1.1 404 not found');
-            }
+        }
+    
+        public function repairBodywork(){
+            $results = $this->getShowText();
+            $this->render('repairBodywork', compact('results'));
             
         }
-        
-        catch(PDOException $e) {
-            echo "Error: " . $e->getMessage();
-        }
-    }
+};
 
-    public function render($view, $data = []) {
-        extract($data);
-        require_once "views/$view.php";
-    }
 
-    public function repairBodywork(){
-        $results = $this->getShowText();
-        $this->render('repairBodywork', compact('results'));
-        
-    }
 
-}
+    

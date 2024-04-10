@@ -26,21 +26,21 @@
 
     <div class="service">
 
-        <a href="views/repairBodywork.php">
+        <a href="index.php?controller=serviceController&id=1">
             <button type="button" class="reparation">Réparation de carrosserie</button>
         </a>
 
 
-        <a href="views/mechanicalCar.php">
+        <a href="index.php?controller=serviceController&id=3">
             <button type="button" class="mecanique">Mécanique des voitures</button>
         </a>
 
 
-        <a href="views/Maintenance.php">
+        <a href="index.php?controller=serviceController&id=2">
             <button type="button" class="entretien">Entretien régulier</button>
         </a>
 
-        <a href="views/usedCarSale.php">
+        <a href="index.php?controller=serviceController&id=4">
             <button type="button" class="vente">Vente de véhicules d'occasion</button>
         </a>
     </div>

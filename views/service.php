@@ -23,9 +23,10 @@
 ?>
 
     <main>
-
+        
 
         <?php
+        
         var_dump($results);
         if (isset($results)) {
             foreach ($results as $result) {
@@ -39,7 +40,7 @@
 
         <button class="button"onclick="window.location.href = '../HTML/infoForm.html';">Prendre rendez-vous</button>
     </main>
-
+        
 <?php require 'footer.php'; ?>
 
 </body>

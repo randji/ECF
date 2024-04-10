@@ -1,24 +1,24 @@
 <?php
 
 namespace Controllers;
-class Controller
+
+class RepairController extends Controller
 {
     public function route(): void
     {
-        if ( isset($_GET ['controller']))
+        if ( isset($_GET ['action']))
         {
-                switch ($_GET ['controller']){
-                    case 'serviceController':
-                        //require_once 'views/Home.php';
-                        $ServicePage = new RepairController();
-                        $ServicePage->route();
+                switch ($_GET ['action']){
+                    case 'home':
+                        //appeler la methode repair
+                        var_dump('on appelle repair');
                         break;
-                    case 'connexionController':
+                    case 'homeController':
                         echo 'on charge homeController';
                         var_dump('on charge homeController');
                         //charger controller home
                         break;
-                    case 'usedCarController':
+                    case 'serviceController':
                         //charger controller service
                         break;
                     case 'connexionController':
@@ -36,22 +36,11 @@ class Controller
                 //charger page acceuil
             }
     }
-    // gérer et transferer les paramètres au views
-    protected function render(string $path, array $params = []): void
-    {
-        $filePath = _ROOTPATH_.'/views/'.$path.'.php';
 
-        try{
-            if (!file_exists($filePath)){
-                throw new \Exception("Fichier non trouvé : ". $filePath);
-            } else {
-                require_once $filePath;
-            }
-        } catch(\Exception $e){
-            echo $e->getMessage();
+    protected function repair()
+        {
+            $params = ['test'=> 'abc'];
+            $this ->render('page/about',$params);
         }
-        
+};
 
-       
-    }
-}

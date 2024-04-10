@@ -1,6 +1,20 @@
 <?php
 
-const BASE_URL = '/ecf';
+define('_ROOTPATH_', __DIR__);
+
+require 'vendor/autoload.php';
+require_once 'views/Home.php';
+
+// use namespace/class
+use Controllers\Controller;
+
+$controller = new Controller() ;
+$controller->route();
+
+
+
+
+/*const BASE_URL = '/ecf';
 require_once  'views/Home.php';
 require_once 'models/Router.php';
 require_once 'controllers/homeController.php';
@@ -27,4 +41,4 @@ if ($handler == null ) {
 
 $controller = new $handler['controller']();
 $action = $handler['action'];
-$controller->$action();
+$controller->$action();*/
