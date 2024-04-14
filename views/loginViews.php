@@ -1,5 +1,5 @@
 <?php
-require "session.php"
+//require "session.php"
 ?>
 
 
@@ -23,7 +23,7 @@ require "session.php"
 <main>
     <div class="register">
         <h1>CONNECTION</h1>
-        <form action="loginPost.php" method="post">
+        <form method="POST" action="/login">
 
             <label for="email">Email</label><br>
             <input type="email" name="email" required/><br><br>

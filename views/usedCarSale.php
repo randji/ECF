@@ -16,7 +16,7 @@
     <main>
 
         <?php
-        require 'PHP/loginServiceText.php';
+        require '../PHP/loginServiceText.php';
         if (isset($results)) {
             foreach ($results as $result) {
                 echo '<div class="title">' . $result['titre'] . '</div>';

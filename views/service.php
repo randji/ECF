@@ -13,21 +13,11 @@
 
 <?php 
     require 'header.php';
-    require '../models/database.php';
-    require '../controllers/serviceController.php';
-    $pdo= new Database();
-    $pdo = $pdo->getConnection();
-    $serviceController = new serviceController();
-    $results = $serviceController->getShowText();
-
 ?>
 
     <main>
-        
 
         <?php
-        
-        var_dump($results);
         if (isset($results)) {
             foreach ($results as $result) {
                 echo '<div class="title">' . $result['titre'] . '</div>';

@@ -1,50 +1,13 @@
 <?php
 
+
+
 namespace Controllers;
+
+use connexion\Database;
 
 class ServiceController extends Controller
 {
-    public function route(): void
-    {
-        if ( isset($_GET ['action']))
-        {
-                switch ($_GET ['action']){
-                    case 'home':
-                        //appeler la methode repair
-                        var_dump('on appelle repair');
-                        break;
-                    case 'homeController':
-                        echo 'on charge homeController';
-                        var_dump('on charge homeController');
-                        //charger controller home
-                        break;
-                    case 'serviceController':
-                        //charger controller service
-                        break;
-                    case 'connexionController':
-                        //charger controller connexion
-                        break;
-                    case 'formContactController':
-                        //charger controller formContact
-                        break;
-                        break;
-                    default :
-                        //erreur
-                        break;
-                }
-            }else{
-                //charger page acceuil
-            }
-    }
-
-
-
-    protected function repair()
-        {
-            $params = ['test'=> 'abc'];
-            $this ->render('page/about',$params);
-        }
-
 
     public function getShowText()
         {
@@ -52,13 +15,12 @@ class ServiceController extends Controller
             {
                 $pdo = new Database();
                 $pdo = $pdo->getConnection();
-                if(isset($pdo)){
-                    echo "Connected successfully";
-                }
-                else{
-                    echo "Not connected";
+                
+                if(!isset($pdo)){
+                    echo "Not connected";   
                 }
                 
+    
                 $pagename = $_GET['id'];
                 
                 
@@ -67,9 +29,11 @@ class ServiceController extends Controller
     
                 $stmt->execute([':pagename' => $pagename]);
     
-                $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                var_dump($results);
+                $results = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+                
+                require_once 'views/service.php';
                 return $results;
+                
                 
                 }
                 else{
@@ -77,16 +41,10 @@ class ServiceController extends Controller
                 }
                 
             }
-            
-            catch(PDOException $e) {
+            // le \ avant PDO indique que PDO est dans l'espace de noms global de PHP
+            catch(\PDOException $e) {
                 echo "Error: " . $e->getMessage();
             }
-        }
-    
-        public function repairBodywork(){
-            $results = $this->getShowText();
-            $this->render('repairBodywork', compact('results'));
-            
         }
 };
 

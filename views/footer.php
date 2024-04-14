@@ -1,7 +1,13 @@
 <?php
+use connexion\Database;
 
-require_once "../dsn.php";
-$pdo=connexionBdd($dsn, $username, $password);
+
+$pdo = new Database();
+$pdo = $pdo->getConnection();
+
+if(!isset($pdo)){
+    echo "Not connected";   
+}
 
 $sql=  "SELECT * FROM garageparrot.schedule";
 $stmt = $pdo->prepare($sql);

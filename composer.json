@@ -4,7 +4,11 @@
       },
       "autoload": {
         "psr-4": {
-          "Controllers\\": "controllers/"
+          "Controllers\\": "controllers/",
+          "connexion\\": "models/",
+          "Crud\\": "controllers/",
+          "Access\\": "controllers/",
+          "Dashboard\\": "controllers/"
         }
       }
 

@@ -14,7 +14,7 @@
 <?php require 'header.php'; ?>
 
 <main>
-    <a href="PHP/login.php">
+    <a href="/loginViews">
         <button type="button" class="connexion">Connexion</button>
     </a>
 
@@ -26,21 +26,22 @@
 
     <div class="service">
 
-        <a href="index.php?controller=serviceController&id=1">
+       
+    <a href="/service?id=1">
             <button type="button" class="reparation">Réparation de carrosserie</button>
         </a>
 
 
-        <a href="index.php?controller=serviceController&id=3">
+        <a href="/service?id=3">
             <button type="button" class="mecanique">Mécanique des voitures</button>
         </a>
 
 
-        <a href="index.php?controller=serviceController&id=2">
+        <a href="/service?id=2">
             <button type="button" class="entretien">Entretien régulier</button>
         </a>
 
-        <a href="index.php?controller=serviceController&id=4">
+        <a href="/service?id=4">
             <button type="button" class="vente">Vente de véhicules d'occasion</button>
         </a>
     </div>

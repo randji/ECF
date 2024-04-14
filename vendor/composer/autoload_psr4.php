@@ -6,5 +6,9 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'connexion\\' => array($baseDir . '/models'),
+    'Dashboard\\' => array($baseDir . '/controllers'),
+    'Crud\\' => array($baseDir . '/controllers'),
     'Controllers\\' => array($baseDir . '/controllers'),
+    'Access\\' => array($baseDir . '/controllers'),
 );

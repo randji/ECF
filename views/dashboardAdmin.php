@@ -1,19 +1,11 @@
 
 <?php
-require "../dsn.php";
-require_once "../PHP/session.php";
+/*require_once "../PHP/session.php";
 if(session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
-}
+}*/
 //adminOnly();
 
-$pdo=connexionBdd($dsn, $username, $password);
-
-$sql = "SELECT * FROM pagename";
-$stmt = $pdo->prepare($sql);
-$stmt->execute();
-
-$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -29,24 +21,6 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
 
     <div class="back">
-        <!-- Affichage erreur si produit non trouvé -->
-        <?php
-        if (!empty($_SESSION['erreur'])){ ?>
-            <div class="erreur">
-                <?= $_SESSION['erreur'] ?>
-            </div>
-        <?php
-        unset($_SESSION['message']);
-        } ?>
-           <!-- Affichage message si SUCCES-->
-        <?php
-        if (!empty($_SESSION['message'])){ ?>
-            <div class="message">
-                <?= $_SESSION['message'] ?>
-            </div>
-            <?php
-            unset($_SESSION['message']);
-        } ?>
 
 
         <div class="title">

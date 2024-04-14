@@ -2,7 +2,7 @@
 
 
 <?php
-require dirname(__DIR__) . '/dsn.php';
+//require dirname(__DIR__) . '/dsn.php';
 
 try {
     $pdo = new PDO($dsn, $username, $password);

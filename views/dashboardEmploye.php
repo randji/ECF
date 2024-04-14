@@ -1,6 +1,5 @@
 
 <?php
-require_once "../PHP/session.php";
 
 //employeOnly();
 ?>
