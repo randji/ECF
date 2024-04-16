@@ -1,12 +1,11 @@
 <?php
-require "../dsn.php";
-require "../PHP/session.php";
 
-if(session_status() !== PHP_SESSION_ACTIVE) {
+
+/*if(session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
 }
 
-$pdo=connexionBdd($dsn, $username, $password);
+
 
 //menu déroulant
 $sql = "SELECT * FROM pagename";
@@ -29,7 +28,7 @@ if($_POST){
 
     $_session['message'] = "Page ajoutée avec succès";
     header('Location: ../admin/dashboardAdmin.php');
-}/*else{
+}else{
     $_SESSION['erreur'] = "Le formulaire est incomplet";
 }*/
 
@@ -40,7 +39,7 @@ if($_POST){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CREER UNE PAGE</title>
-    <link rel="stylesheet" href="../CSS/dashboardAdmin.css">
+    <link rel="stylesheet" href="../CSS/adminPage.css">
 </head>
 <body>
 <section>
@@ -50,23 +49,31 @@ if($_POST){
             <?= $_SESSION['erreur'] ?>
         </div>
     <?php }?>
+    <main class="back">
+        <h1 class="titre">PAGE</h1>
+        
+        <form method="POST" action="/change">
+            
+            
+                <?php foreach ($results as $result) { 
+                    echo '<label for="titre">TITRE</label>'.'<br>'.'<textarea  class="selectPage1" name="titre" rows="2" cols="50" required>' . $result['titre'] . '</textarea>'. '<br>'. '<br>';
+                    echo '<label for="texte">TEXTE</label>'.'<br>'.'<textarea class="selectPage2" name="texte" rows="5" cols="50" required>' . $result['text'] . '</textarea>'. '<br>'. '<br>';
+                } ?>
 
-    <h1>Créer une page</h1>
-    <form method="POST">
-        <select name="service" id="service" class="selectPage">
-            <?php
-            foreach ($results as $result) {
-                echo "<option value='".$result['id_pageName']."'>".$result['namePage']."</option>";
-            }
-            ?>
-        </select>
-        <br><br>
-        <label for="titre"> TITRE</label>
-        <input type="text" name="titre" required/><br><br>
-        <label for="texte">TEXTE</label>
-        <textarea name="texte" rows="10" cols="50" required></textarea><br><br>
-        <button type="submit">Enregistrer</button>
-    </form>
+            <br><br>
+            <button type="submit">Modifier</button>
+
+            <a href="../PHP/logout.php">
+            <button type="button" class="deconnexion">Déconnexion</button>
+            </a>
+
+            <a href="/views/dashboardEmploye.php">
+            <button type="button" class="deconnexion">Retour</button>
+            </a>
+
+        </form>
+    </main>
+    
 </section>
 
 </body>

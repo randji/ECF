@@ -1,9 +1,10 @@
 <?php
 namespace Controllers;
 
-class HomeController extends Controller
+class homeController extends Controller
 {
-    public function home(){
+    public function home(): void
+    {
         
         require_once "views/home.php";
     }

@@ -1,13 +1,4 @@
 
-<?php
-/*require_once "../PHP/session.php";
-if(session_status() !== PHP_SESSION_ACTIVE) {
-    session_start();
-}*/
-//adminOnly();
-
-
-?>
 
 
 <!DOCTYPE html>
@@ -24,13 +15,14 @@ if(session_status() !== PHP_SESSION_ACTIVE) {
 
 
         <div class="title">
-            <h1>tableau de bord<br>ADMINISTRATEUR</h1>
+            <p>tableau de bord</p>
+            <p>ADMINISTRATEUR</p>
         </div>
 
 
         <div class="page">
             <h2>PAGE</h2>
-            <form action="pagePost.php" method="POST">
+            <form class="pageInput" method="POST" action="/page">
             <select name="service" id="service" class="selectPage">
                 <?php
                 foreach ($results as $result) {

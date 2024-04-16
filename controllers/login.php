@@ -8,6 +8,12 @@ use Dashboard\employe;
 
 class Login
 {
+    public function viewLogin(){
+        
+        require_once "views/loginViews.php";
+    }
+
+
     public function login(){
         
         $paramSession = new admin();
@@ -15,9 +21,7 @@ class Login
 
         $session = new admin();
         $session->sessionStart();
-        
 
-        require_once "views/loginViews.php";
 
         try{
             $pdo = new Database();
@@ -37,26 +41,28 @@ class Login
                 $stmt =  $pdo->prepare($query);
                 $stmt->bindParam(':email', $emailForm);
                 $stmt->execute();
-                var_dump($stmt->rowCount());
+                
 
                 if ($stmt->rowCount() == 1){
                     $monUser = $stmt->fetch(\PDO::FETCH_ASSOC);
-                    var_dump($monUser);
+                    
                     
 
                     if (password_verify($passwordForm, $monUser['password'])){
                         session_regenerate_id(true);
                         $_SESSION['user'] = $monUser;
-                        var_dump($_SESSION['user']);
+                        
                         if ($monUser['role'] == 'admin') {
                             $admin = new admin();
                             $admin->adminAction();
+                            exit();
                             
                             
                         }
                         if ($monUser['role'] == 'employe'){
                             $employe = new employe();
                             $employe->employeAction();
+                            exit();
                         }
                     }
                 }

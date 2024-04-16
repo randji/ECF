@@ -1,5 +1,5 @@
 <?php
-require "../dsn.php";
+/*require "../dsn.php";
 require "../PHP/session.php";
 
 if(session_status() !== PHP_SESSION_ACTIVE) {
@@ -20,7 +20,7 @@ $pdo=connexionBdd($dsn, $username, $password);
     }
     else{
         echo "erreur";
-    }
+    }*/
 
 ?>
 

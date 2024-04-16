@@ -1,6 +1,6 @@
 <?php
 require 'vendor/autoload.php';
-define('ROOT', __DIR__);
+
 class Router
 {
     private array $routes = [] ;
@@ -47,10 +47,12 @@ class Router
 
 $router = new Router();
 $router->addRoute('GET', '/service', 'Controllers\ServiceController', 'getShowText');
-$router->addRoute('GET', '/index.php', 'Controllers\HomeController', 'home');
-$router->addRoute('GET', '/loginViews', 'Access\Login', 'login');
+$router->addRoute('GET', '/index.php', 'Controllers\homeController', 'home');
+$router->addRoute('GET', '/loginViews', 'Access\Login', 'viewLogin');
 $router->addRoute('POST', '/login', 'Access\Login', 'login');
 $router->addRoute('POST', '/admin', 'Dashboard\admin', 'adminAction');
 $router->addRoute('POST', '/employe', 'Dashboard\employe', 'employeAction');
-$router->addRoute('POST', '/create', 'Crud\CreatePage', 'create');
+$router->addRoute('POST', '/page', 'Dashboard\admin', 'page');
+$router->addRoute('POST', '/change', 'Dashboard\admin', 'changePage');
+//$router->addRoute('POST', '/create', 'Crud\CreatePage', 'create');
 $router->route();

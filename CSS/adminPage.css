@@ -1,0 +1,46 @@
+a {
+    text-decoration: none;
+}
+
+body {
+    background-image: url("../img/back.png");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+}
+.back{
+    position: relative;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255,0.1), rgba(255,255,255,0));
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.titre{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+.selectPage1, .selectPage2{
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255,0.9), rgba(255,255,255,0));
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center;
+    justify-content: center; */
+    margin: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
