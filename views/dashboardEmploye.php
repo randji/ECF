@@ -21,11 +21,11 @@
     <a href="../CRUD/createUsedCard.php">
         <button type="button" class="vehicule">ajouter véhicule</button>
     </a>
-    <a href="opinionVisitor.php">
+    <a href="../employe/opinionVisitor.php">
         <button type="button" class="opinion">avis visiteur</button>
     </a>
 
-        <a href="../PHP/logout.php">
+        <a href="/logout">
             <button type="button" class="deconnexion">Déconnexion</button>
         </a>
 

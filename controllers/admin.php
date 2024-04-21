@@ -1,5 +1,5 @@
 <?php
-namespace Dashboard;
+namespace Controllers;
 use connexion\Database;
 
 
@@ -8,7 +8,8 @@ use connexion\Database;
 
 class session{
 
-    public function paramSession (){
+    public function paramSession (): void
+    {
         session_set_cookie_params([
             'lifetime' => 60*60*3, // 3 heures
             'path' => '/',
@@ -19,7 +20,8 @@ class session{
         ]);
     }
 
-    public function sessionStart (){
+    public function sessionStart (): void
+    {
         session_start();
     }
     

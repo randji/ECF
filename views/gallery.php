@@ -1,51 +1,51 @@
 
 
 <?php
-require "../dsn.php";
-require "../function/filterCarUsed.php";
+// require "../dsn.php";
+// require "../function/filterCarUsed.php";
 
-$pdo=connexionBdd($dsn, $username, $password);
+// $pdo=connexionBdd($dsn, $username, $password);
 
-function getAllCars($pdo){
-    $sql=  "SELECT * FROM garageparrot.cars";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
-    return $stmt->fetchall(PDO::FETCH_ASSOC);
+// function getAllCars($pdo){
+//     $sql=  "SELECT * FROM garageparrot.cars";
+//     $stmt = $pdo->prepare($sql);
+//     $stmt->execute();
+//     return $stmt->fetchall(PDO::FETCH_ASSOC);
     
-}
+// }
 
 
 
-if (isset($_POST['getAllCars']) && $_POST['getAllCars'] === 'true') {
-    $voitures = getAllCars($pdo);
-    echo json_encode($voitures);
-    exit;
+// if (isset($_POST['getAllCars']) && $_POST['getAllCars'] === 'true') {
+//     $voitures = getAllCars($pdo);
+//     echo json_encode($voitures);
+//     exit;
     
-} 
+// } 
 
-else if (isset($_POST['minPrice']) && isset($_POST['maxPrice'])) {
-    $column = 'price';
-    $min= $_POST['minPrice'];
-    $max= $_POST['maxPrice'];
-    $voitures=filter($column, $min, $max, $pdo);
-    exit;
-}
+// else if (isset($_POST['minPrice']) && isset($_POST['maxPrice'])) {
+//     $column = 'price';
+//     $min= $_POST['minPrice'];
+//     $max= $_POST['maxPrice'];
+//     $voitures=filter($column, $min, $max, $pdo);
+//     exit;
+// }
 
-else if (isset($_POST['minkm']) && isset($_POST['maxkm'])) {
-    $column = 'numberKm';
-    $min= $_POST['minkm'];
-    $max= $_POST['maxkm'];
-    $voitures=filter($column, $min, $max, $pdo);
-    exit;
-}
+// else if (isset($_POST['minkm']) && isset($_POST['maxkm'])) {
+//     $column = 'numberKm';
+//     $min= $_POST['minkm'];
+//     $max= $_POST['maxkm'];
+//     $voitures=filter($column, $min, $max, $pdo);
+//     exit;
+// }
 
-else if (isset($_POST['minYear']) && isset($_POST['maxYear'])) {
-    $column = 'yearsService';
-    $min= $_POST['minYear'];
-    $max= $_POST['maxYear'];
-    $voitures=filter($column, $min, $max, $pdo);
-    exit;
-}
+// else if (isset($_POST['minYear']) && isset($_POST['maxYear'])) {
+//     $column = 'yearsService';
+//     $min= $_POST['minYear'];
+//     $max= $_POST['maxYear'];
+//     $voitures=filter($column, $min, $max, $pdo);
+//     exit;
+// }
         
 
 
@@ -80,7 +80,7 @@ else if (isset($_POST['minYear']) && isset($_POST['maxYear'])) {
 
 <body>
 
-    <?php require '../header.php'; ?>
+    <?php require 'header.php'; ?>
 
 
 
@@ -142,7 +142,7 @@ else if (isset($_POST['minYear']) && isset($_POST['maxYear'])) {
     </main>
 
     
-    <?php require '../footer.php' ?>
+    <?php require 'footer.php' ?>
     
     <script>
         // JavaScript

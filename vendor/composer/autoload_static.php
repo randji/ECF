@@ -11,6 +11,10 @@ class ComposerStaticInit770a238a9889103a9f934dc38616df8a
         array (
             'connexion\\' => 10,
         ),
+        'G' => 
+        array (
+            'GalleryCars\\' => 12,
+        ),
         'D' => 
         array (
             'Dashboard\\' => 10,
@@ -30,6 +34,10 @@ class ComposerStaticInit770a238a9889103a9f934dc38616df8a
         'connexion\\' => 
         array (
             0 => __DIR__ . '/../..' . '/models',
+        ),
+        'GalleryCars\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/controllers',
         ),
         'Dashboard\\' => 
         array (

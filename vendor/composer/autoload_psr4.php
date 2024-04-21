@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'connexion\\' => array($baseDir . '/models'),
+    'GalleryCars\\' => array($baseDir . '/controllers'),
     'Dashboard\\' => array($baseDir . '/controllers'),
     'Crud\\' => array($baseDir . '/controllers'),
     'Controllers\\' => array($baseDir . '/controllers'),

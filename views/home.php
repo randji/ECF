@@ -41,7 +41,7 @@
             <button type="button" class="entretien">Entretien régulier</button>
         </a>
 
-        <a href="/service?id=4">
+        <a href="/usedCar">
             <button type="button" class="vente">Vente de véhicules d'occasion</button>
         </a>
     </div>

@@ -42,38 +42,39 @@ if($_POST){
     <link rel="stylesheet" href="../CSS/adminPage.css">
 </head>
 <body>
-<section>
-    <?php
-    if (!empty($_SESSION['erreur'])){ ?>
-        <div class="erreur">
-            <?= $_SESSION['erreur'] ?>
-        </div>
-    <?php }?>
+
     <main class="back">
-        <h1 class="titre">PAGE</h1>
+        <div class="title">
+            <p>PAGE</p>
+  
+        </div>
         
-        <form method="POST" action="/change">
+        <form method="POST" action="/update">
             
             
                 <?php foreach ($results as $result) { 
-                    echo '<label for="titre">TITRE</label>'.'<br>'.'<textarea  class="selectPage1" name="titre" rows="2" cols="50" required>' . $result['titre'] . '</textarea>'. '<br>'. '<br>';
-                    echo '<label for="texte">TEXTE</label>'.'<br>'.'<textarea class="selectPage2" name="texte" rows="5" cols="50" required>' . $result['text'] . '</textarea>'. '<br>'. '<br>';
+                    echo '<label for="titre" class="label" >TITRE</label>'.'<textarea  class="selectPage1" name="titre" rows="2" cols="50" required>' . $result['titre'] . '</textarea>'. '<br>'. '<br>';
+                    echo '<label for="texte" class="label">TEXTE</label>'.'<textarea class="selectPage2" name="texte" rows="5" cols="50" required>' . $result['text'] . '</textarea>'. '<br>'. '<br>';
                 } ?>
+            <br>
+                <button type="submit">Modifier</button>
 
-            <br><br>
-            <button type="submit">Modifier</button>
+            <div class="button">
+                    
 
-            <a href="../PHP/logout.php">
-            <button type="button" class="deconnexion">Déconnexion</button>
-            </a>
+                    <a href="../PHP/logout.php">
+                    <button type="button" class="deconnexion">Déconnexion</button>
+                    </a>
 
-            <a href="/views/dashboardEmploye.php">
-            <button type="button" class="deconnexion">Retour</button>
-            </a>
+                    <a href="/back">
+                    <button type="button" class="deconnexion">Retour</button>
+                    </a>
+            </div>
+            
 
         </form>
     </main>
     
-</section>
+
 
 </body>

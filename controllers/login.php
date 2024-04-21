@@ -1,9 +1,9 @@
 <?php
 namespace Access;
 use connexion\Database;
-use Dashboard\admin;
-use Dashboard\session;
-use Dashboard\employe;
+use Controllers\admin;
+use Controllers\session;
+use Controllers\employe;
 
 
 class Login
@@ -59,10 +59,13 @@ class Login
                             
                             
                         }
-                        if ($monUser['role'] == 'employe'){
+                        elseif ($monUser['role'] == 'employe'){
                             $employe = new employe();
                             $employe->employeAction();
                             exit();
+                        }
+                        else{
+                            echo "accés refusée";
                         }
                     }
                 }

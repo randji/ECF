@@ -43,7 +43,7 @@
         </a>
 
 
-        <a href="../PHP/logout.php">
+        <a href="/logout">
             <button type="button" class="deconnexion">Déconnexion</button>
         </a>
 

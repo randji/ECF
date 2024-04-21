@@ -53,14 +53,6 @@ if($_POST){
     <link rel="stylesheet" href="../CSS/crud.css">
 </head>
 <body>
-<section>
-    <?php
-    if (!empty($_SESSION['erreur'])){ ?>
-        <div class="erreur">
-            <?= $_SESSION['erreur'] ?>
-        </div>
-    <?php }?>
-
 
 <main class="back">
     <h1 class="title">Ajouter véhicule</h1>
@@ -71,24 +63,23 @@ if($_POST){
                 <input type="file" name="image2" required/><br><br>
                 <label for="image3">IMAGE 3</label>
                 <input type="file" name="image3" required/><br><br>
-                <label for="model">Modèle</label>
+                <label for="model">Modèle</label><br>
                 <input type="text" name="model" required/><br><br>
-                <label for="price">Prix</label>
+                <label for="price">Prix</label><br>
                 <input type="number" name="price" required/><br><br>
-                <label for="years">Année</label>
+                <label for="years">Année</label><br>
                 <input type="number" name="years" required/><br><br>
-                <label for="km">Kilométrage</label>
+                <label for="km">Kilométrage</label><br>
                 <input type="number" name="km" required/><br><br>
-                <label for="gears">Type de boite de vitesse</label>
+                <label for="gears">Type de boite de vitesse</label><br>
                 <input type="texte" name="gears" required/><br><br>
-                <label for="carburant">Carburant</label>
+                <label for="carburant">Carburant</label><br>
                 <input type="text" name="carburant" required/><br><br>
-                <label for="equipement">Equipement</label>
-                <textarea name="equipement" rows="5" cols="50" ></textarea><br><br>
+                <label for="equipement">Equipement</label><br>
+                <textarea name="equipement" rows="5" cols="33" ></textarea><br><br>
                 <button class="button" type="submit">Enregistrer</button>
     </form>
 </main>
 
-</section>
 
 </body>
